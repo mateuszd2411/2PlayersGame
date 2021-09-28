@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 255720689}
   - component: {fileID: 255720688}
   - component: {fileID: 255720690}
+  - component: {fileID: 255720691}
   m_Layer: 0
   m_Name: SnowBallFightArt_0
   m_TagString: Untagged
@@ -592,6 +593,25 @@ MonoBehaviour:
   right: 100
   jump: 32
   throwBall: 102
+--- !u!95 &255720691
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255720685}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 06f80a065d3f102479a86028d5f56852, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &295088134
 GameObject:
   m_ObjectHideFlags: 0
