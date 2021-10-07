@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] p1Sticks;
     public GameObject[] p2Sticks;
 
+    public AudioSource hurtSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +56,8 @@ public class GameManager : MonoBehaviour
             }
           
         }
+
+        hurtSound.Play();
     }
 
     public void HurtP2()
@@ -73,5 +77,7 @@ public class GameManager : MonoBehaviour
             }
 
         }
+
+        hurtSound.Play();
     }
 }

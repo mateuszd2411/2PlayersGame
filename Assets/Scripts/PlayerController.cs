@@ -23,7 +23,9 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
 
     public GameObject snowBall;
-    public Transform throwPoint; 
+    public Transform throwPoint;
+
+    public AudioSource throwSound;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,8 @@ public class PlayerController : MonoBehaviour
             GameObject ballClone = (GameObject) Instantiate(snowBall, throwPoint.position, throwPoint.rotation);
             ballClone.transform.localScale = transform.localScale;
             anim.SetTrigger("Throw");
+
+            throwSound.Play();
         }
 
         if(theRB.velocity.x <0)
