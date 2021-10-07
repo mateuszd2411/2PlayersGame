@@ -5,12 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public string mainGameScene;
+    public string level1;
+    public string level2;
 
     // Start is called before the first frame update
-    public void StartGame()
+    public void StartLevel1()
     {
-        SceneManager.LoadScene(mainGameScene);
+        SceneManager.LoadScene(level1);
+    }
+
+    public void StartLevel2()
+    {
+        SceneManager.LoadScene(level2);
     }
 
     // Update is called once per frame
