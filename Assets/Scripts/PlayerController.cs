@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
 
     private Animator anim;
 
+    public GameObject snowBall;
+    public Transform throwPoint; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +53,13 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(jump) && isGrounded)
         {
             theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+        }
+
+        if(Input.GetKeyDown(throwBall))
+        {
+            GameObject ballClone = (GameObject) Instantiate(snowBall, throwPoint.position, throwPoint.rotation);
+            ballClone.transform.localScale = transform.localScale;
+            anim.SetTrigger("Throw");
         }
 
         if(theRB.velocity.x <0)
